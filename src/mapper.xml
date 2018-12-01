@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dawi">
+	
+	<!-- Login -->
+	<select id="SQL_login" parameterType="filtroBeanIbatis" resultType="usuarioBeanIbatis">
+			select nombre as nombre, 
+				   apellidos as apellidos,
+				   sexo as sexo,
+				   login as login,
+				   fechaNacimiento as fechaNacimiento,
+				   correo as correo
+			from usuario 
+			where login = #{usuario} and password = #{clave}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
