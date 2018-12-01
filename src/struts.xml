@@ -6,6 +6,13 @@
 
 <struts>
 	<package name="dawi" namespace="/" extends="struts-default,json-default">
+		<action name="sessionman" class="com.reserva.restaurante.action.LoginAction" method="execute">
+			<result name="SUCCESS">/listaRestaurantes.jsp</result>
+			<result name="LOGIN">/index.jsp</result>
+		</action>
+		<action name="logout" class="com.reserva.restaurante.action.LoginAction" method="logout">
+			<result name="LOGOUT">/index.jsp</result>
+		</action>
 	</package>
 	<constant name="struts.multipart.saveDir" value="location of your choice" />
 </struts>

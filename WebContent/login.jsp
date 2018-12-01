@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,25 +44,26 @@
 
   <div class="container">
 
-    <form class="login-form" action="login">
+    <form class="login-form" action="sessionman">
       <div class="login-wrap">
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
-          <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Username" autofocus>
+          <input type="text" id="usuario" name="userId" class="form-control" placeholder="Username" autofocus>
         </div>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-          <input type="password" id="pass" name="clave" class="form-control" placeholder="Password">
+          <input type="password" id="pass" name="userPass" class="form-control" placeholder="Password">
         </div>
         <label class="checkbox">
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
-            </label>
+        </label>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
         <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
       </div>
     </form>
+    <s:property value="msg" />
     <div class="text-right">
       <div class="credits">
           <!--
@@ -74,8 +76,5 @@
         </div>
     </div>
   </div>
-
-
 </body>
-
 </html>
